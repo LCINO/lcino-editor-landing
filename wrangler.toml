@@ -1,0 +1,10 @@
+name = "lcino-editor-landing"
+compatibility_date = "2026-10-01"
+
+# Cloudflare Workers (static assets) deployment — alternative to Pages.
+# Deploy from this folder with:  npx wrangler deploy
+# Then bind the custom domain in the Cloudflare dashboard
+# (Workers & Pages → this worker → Domains & Routes → add editor.lcino.com).
+
+[assets]
+directory = "."
