@@ -1,6 +1,12 @@
 name = "lcino-editor-landing"
 compatibility_date = "2026-10-01"
 
+# Custom domain — requires the lcino.com zone on the same Cloudflare account.
+# Wrangler attaches the Workers Custom Domain (DNS + SSL) on deploy.
+routes = [
+  { pattern = "editor.lcino.com", custom_domain = true }
+]
+
 # Cloudflare Workers (static assets) deployment — alternative to Pages.
 # Deploy from this folder with:  npx wrangler deploy
 # Then bind the custom domain in the Cloudflare dashboard
